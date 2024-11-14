@@ -143,17 +143,13 @@ fan(S,belenenses):-sonof(S,daniel).
 fan(M2,porto):-owner(M1,cavalo),livesbyside(M1,M2).
 drinks(H,cafe):-painted(H,verde).
 painted(H,verde):-drinks(H,cafe).
-%painted(M2,branca):-painted(M,verde),lives(M,C),lives(M2,C-1).
-%painted(M,verde):-painted(M2,branca),lives(M,C),lives(M2,C-1).
+painted(M2,branca):-painted(M,verde),lives(M,C),lives(M2,C-1).
+painted(M,verde):-painted(M2,branca),lives(M,C),lives(M2,C-1).
 drinks(M,leite):-lives(M,3).
 lives(M,3):-drinks(M,leite).
 
 :-married(carlos,maria).
 
 :-married(M1,W1),married(M2,W2),pref(M1,W1,X1),pref(M1,W2,X2),X1<X2,pref(W2,M2,Y1),pref(W2,M1,Y2),Y1<Y2.
-
-%:-owner(M2,raposa),fan(M,academica),lives(M,C),not lives(M2,C+1),not lives(M2,C-1).
-%:-painted(M,azul),lives(pedro,C),not lives(M,C+1),not lives(M,C-1).
-%:-fan(M2,porto),owner(M1,cavalo),lives(M2,C),not lives(M1,C+1),not lives(M1,C-1).
 
 #show owner/2.
